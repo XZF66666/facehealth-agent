@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profileRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home_gradient"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="12dp">
+
+        <ImageButton
+            android:id="@+id/profileBackButton"
+            android:layout_width="46dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_secondary_button"
+            android:contentDescription="返回"
+            android:padding="10dp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/PageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的健康档案"
+                android:textSize="21sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="用于个人基线和 Agent 回答偏好"
+                android:textColor="@color/muted"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_panel"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    style="@style/SectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="基础信息" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="年龄段"
+                    android:textColor="@color/muted"
+                    android:textSize="13sp" />
+
+                <Spinner
+                    android:id="@+id/profileAgeRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_field"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="日常活动水平"
+                    android:textColor="@color/muted"
+                    android:textSize="13sp" />
+
+                <Spinner
+                    android:id="@+id/profileActivityLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_field"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="运动习惯"
+                    android:textColor="@color/muted"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/profileExerciseHabits"
+                    style="@style/HealthInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="6dp"
+                    android:hint="例如：慢跑，瑜伽"
+                    android:inputType="text"
+                    android:maxLength="160"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_assistant_panel"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    style="@style/SectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agent 偏好"
+                    android:textColor="@color/primary_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="重点关注"
+                    android:textColor="@color/muted"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/focusStress"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/primary"
+                        android:text="压力" />
+
+                    <CheckBox
+                        android:id="@+id/focusSleep"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/primary"
+                        android:text="睡眠" />
+
+                    <CheckBox
+                        android:id="@+id/focusRecovery"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/primary"
+                        android:text="恢复" />
+
+                    <CheckBox
+                        android:id="@+id/focusExercise"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/primary"
+                        android:text="运动" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="回答详细程度"
+                    android:textColor="@color/muted"
+                    android:textSize="13sp" />
+
+                <RadioGroup
+                    android:id="@+id/responseStyleGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checkedButton="@id/responseBalanced"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/responseConcise"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/primary"
+                        android:text="简洁" />
+
+                    <RadioButton
+                        android:id="@+id/responseBalanced"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/primary"
+                        android:text="均衡" />
+
+                    <RadioButton
+                        android:id="@+id/responseDetailed"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/primary"
+                        android:text="详细" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="个人基线周期"
+                        android:textColor="@color/muted"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/baselineValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="28 天"
+                        android:textColor="@color/primary_dark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/baselineDays"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:progressTint="@color/primary"
+                    android:thumbTint="@color/primary" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/profileStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:text="正在加载健康档案..."
+                android:textColor="@color/muted"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/profileSaveButton"
+                style="@style/PrimaryAction"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="12dp"
+                android:text="保存健康档案" />
+
+            <TextView
+                android:id="@+id/profilePrivacyButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_secondary_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="隐私与数据管理"
+                android:textColor="@color/primary_dark"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-09-21T05:28:35.123162+00:00",
+  "passed": 46,
+  "total": 46,
+  "accuracy": 1.0,
+  "results": [
+    {
+      "suite": "intent_accuracy",
+      "passed": 18,
+      "total": 18,
+      "failures": [],
+      "accuracy": 1.0
+    },
+    {
+      "suite": "quality_gate_accuracy",
+      "passed": 6,
+      "total": 6,
+      "failures": [],
+      "accuracy": 1.0
+    },
+    {
+      "suite": "risk_rule_accuracy",
+      "passed": 12,
+      "total": 12,
+      "failures": [],
+      "accuracy": 1.0
+    },
+    {
+      "suite": "trend_accuracy",
+      "passed": 5,
+      "total": 5,
+      "failures": [],
+      "accuracy": 1.0
+    },
+    {
+      "suite": "workflow_accuracy",
+      "passed": 5,
+      "total": 5,
+      "failures": [],
+      "accuracy": 1.0
+    }
+  ]
+}

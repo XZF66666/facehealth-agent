@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="green">#4CAF50</color>
+    <color name="ink">#18212B</color>
+    <color name="muted">#64707D</color>
+    <color name="surface">#F6F8FA</color>
+    <color name="surface_panel">#FFFFFF</color>
+    <color name="line">#DDE4EA</color>
+    <color name="primary">#5C6CFF</color>
+    <color name="primary_dark">#25205F</color>
+    <color name="primary_soft">#EEF0FF</color>
+    <color name="blue">#2563EB</color>
+    <color name="blue_soft">#E3EDFF</color>
+    <color name="mint">#24B99A</color>
+    <color name="mint_soft">#E6F8F4</color>
+    <color name="amber">#B45309</color>
+    <color name="amber_soft">#FFF1D6</color>
+    <color name="rose">#BE123C</color>
+    <color name="rose_soft">#FFE4EC</color>
+    <color name="status_bar">#EEF1FF</color>
+    <color name="field_hint">#8A94A6</color>
+    <color name="assistant_surface">#F0F2FF</color>
+    <color name="danger_surface">#FFF0F3</color>
+</resources>

@@ -1,0 +1,7 @@
+{"id":"quality-001","metrics":null,"expected_status":"missing","expected_can_interpret":false}
+{"id":"quality-002","metrics":{"heart_rate":72,"respiratory_rate":16,"hrv":48,"stress_score":40,"fatigue_score":35,"video_quality":"合格"},"expected_status":"good","expected_can_interpret":true}
+{"id":"quality-003","metrics":{"heart_rate":72,"respiratory_rate":16,"hrv":48,"stress_score":40,"fatigue_score":35,"video_quality":"良好"},"expected_status":"good","expected_can_interpret":true}
+{"id":"quality-004","metrics":{"heart_rate":72,"respiratory_rate":16,"hrv":48,"stress_score":40,"fatigue_score":35,"video_quality":"poor"},"expected_status":"poor","expected_can_interpret":false}
+{"id":"quality-005","metrics":{"heart_rate":72,"respiratory_rate":16,"hrv":48,"stress_score":40,"fatigue_score":35,"video_quality":"不合格"},"expected_status":"poor","expected_can_interpret":false}
+{"id":"quality-006","metrics":{"heart_rate":72,"respiratory_rate":16,"hrv":48,"stress_score":40,"fatigue_score":35,"video_quality":"未知"},"expected_status":"unknown","expected_can_interpret":true}
+

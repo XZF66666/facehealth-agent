@@ -1,0 +1,60 @@
+{
+  "model_name": "EfficientPhys",
+  "model_version": "PURE-rPPG-Toolbox-FP16-v1",
+  "checkpoint_name": "PURE_EfficientPhys.pth",
+  "checkpoint_sha256": "E65A962E07BCAC32A668E6ACB9F8ED43CDB1B01CFB97262654DC5B55C0CF3A49",
+  "training_dataset": "PURE",
+  "input_name": "input_frames",
+  "output_name": "bvp_diff_normalized",
+  "input_shape": [
+    180,
+    3,
+    72,
+    72
+  ],
+  "output_shape": [
+    180
+  ],
+  "input_layout": "TCHW",
+  "frame_count": 180,
+  "frame_height": 72,
+  "frame_width": 72,
+  "color_order": "RGB",
+  "fps": 30.0,
+  "normalization": "global z-score over all RGB pixels in one video/window",
+  "uses_frame_difference": true,
+  "wrapper_appends_last_frame": true,
+  "output_description": "diff_normalized_bvp_waveform",
+  "postprocessing": "cumulative sum, smoothness-prior detrend lambda=100, 0.75-2.5 Hz band-pass",
+  "onnx_opset": 17,
+  "wrapper_verification": {
+    "shape": [
+      180
+    ],
+    "max_absolute_error": 0.0,
+    "mean_absolute_error": 0.0,
+    "pearson": 1.0,
+    "nan_count": 0,
+    "inf_count": 0
+  },
+  "fp32_verification": {
+    "shape": [
+      180
+    ],
+    "max_absolute_error": 7.748603820800781e-07,
+    "mean_absolute_error": 1.0579824305523289e-07,
+    "pearson": 0.9999999999993153,
+    "nan_count": 0,
+    "inf_count": 0
+  },
+  "fp16_verification": {
+    "shape": [
+      180
+    ],
+    "max_absolute_error": 0.0037202835083007812,
+    "mean_absolute_error": 0.0002663943450897932,
+    "pearson": 0.9999915981342324,
+    "nan_count": 0,
+    "inf_count": 0
+  }
+}

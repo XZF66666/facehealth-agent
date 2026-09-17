@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home_gradient"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="20dp" android:paddingTop="24dp" android:paddingEnd="20dp" android:paddingBottom="28dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="34dp" android:background="@drawable/bg_nav_chip" android:gravity="center" android:paddingStart="14dp" android:paddingEnd="14dp" android:text="测量完成" android:textColor="@color/mint" android:textSize="13sp" android:textStyle="bold" />
+        <TextView style="@style/PageTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="生理信号结果" />
+        <TextView style="@style/PageSubtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="基于面部视频 rPPG 的趋势估计，仅用于健康观察" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:background="@drawable/bg_glass_panel" android:orientation="vertical" android:padding="18dp">
+            <TextView style="@style/SectionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="心率" />
+            <TextView android:id="@+id/heartRateValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="-- BPM" android:textColor="@color/primary" android:textSize="34sp" android:textStyle="bold" />
+            <TextView android:id="@+id/heartRateStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="--" android:textColor="@color/muted" android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_glass_panel" android:orientation="vertical" android:padding="18dp">
+            <TextView style="@style/SectionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="呼吸率" />
+            <TextView android:id="@+id/respiratoryRateValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="-- 次/分钟" android:textColor="@color/blue" android:textSize="34sp" android:textStyle="bold" />
+            <TextView android:id="@+id/respiratoryRateStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="--" android:textColor="@color/muted" android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_glass_panel" android:orientation="vertical" android:padding="18dp">
+            <TextView style="@style/SectionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HRV" />
+            <TextView android:id="@+id/hrvValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="-- ms" android:textColor="@color/amber" android:textSize="34sp" android:textStyle="bold" />
+            <TextView android:id="@+id/hrvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="--" android:textColor="@color/muted" android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button android:id="@+id/btnBackHome" style="@style/PrimaryAction" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="18dp" android:text="返回首页" />
+    </LinearLayout>
+</ScrollView>

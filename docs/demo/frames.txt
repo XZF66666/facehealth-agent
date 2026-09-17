@@ -1,0 +1,8 @@
+file '../competition/evidence/raw/07_sse_loading.png'
+duration 1.2
+file '../competition/evidence/raw/08_sse_partial.png'
+duration 1.8
+file '../competition/evidence/raw/09_sse_complete.png'
+duration 2.5
+file '../competition/evidence/raw/09_sse_complete.png'
+duration 0.2

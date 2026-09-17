@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    env_file:
+      - path: ./backend/.env
+        required: false
+    ports:
+      - "8100:8100"
+    volumes:
+      - facehealth-data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8100/health')",
+        ]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+volumes:
+  facehealth-data:

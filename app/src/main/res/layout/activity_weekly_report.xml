@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/weeklyScroll" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_home_gradient" android:clipToPadding="false" android:fillViewport="true" android:saveEnabled="false">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="20dp" android:paddingTop="24dp" android:paddingEnd="20dp" android:paddingBottom="28dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+            <Button android:id="@+id/pageBackButton" style="@style/BackAction" android:layout_width="46dp" android:layout_height="42dp" android:text="‹" />
+            <TextView style="@style/PageTitle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_weight="1" android:text="一周健康趋势" />
+        </LinearLayout>
+        <TextView style="@style/PageSubtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="查看近 7 天变化，识别压力与恢复趋势" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:background="@drawable/bg_glass_panel" android:orientation="vertical" android:padding="18dp">
+            <TextView style="@style/SectionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="本周概览" />
+            <TextView android:id="@+id/weeklySummaryText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:lineSpacingExtra="6dp" android:textColor="@color/ink" android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_glass_panel" android:orientation="vertical" android:padding="18dp">
+            <TextView style="@style/SectionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="7 天指标曲线" />
+            <TextView android:id="@+id/weeklyEmptyState" style="@style/PageSubtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:gravity="center" android:padding="24dp" android:text="暂无趋势数据\n完成一次检测后即可生成曲线" android:visibility="gone" />
+            <com.example.rppg_mediapipe.WeeklyTrendView android:id="@+id/weeklyTrendChart" android:layout_width="match_parent" android:layout_height="380dp" android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_glass_panel" android:orientation="vertical" android:padding="18dp">
+            <TextView style="@style/SectionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="每日记录" />
+            <TextView android:id="@+id/weeklyListText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:fontFamily="monospace" android:lineSpacingExtra="6dp" android:textColor="@color/ink" android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_assistant_panel" android:orientation="vertical" android:padding="18dp">
+            <TextView style="@style/SectionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AI 趋势解读" android:textColor="@color/primary_dark" />
+            <TextView android:id="@+id/weeklyAgentReport" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:lineSpacingExtra="7dp" android:textColor="@color/ink" android:textIsSelectable="true" android:textSize="15sp" />
+        </LinearLayout>
+
+        <Button android:id="@+id/generateWeeklyButton" style="@style/PrimaryAction" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="18dp" android:text="生成智能周报" />
+        <Button android:id="@+id/weeklyBackHomeButton" style="@style/SecondaryAction" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="10dp" android:text="返回首页" />
+    </LinearLayout>
+</ScrollView>

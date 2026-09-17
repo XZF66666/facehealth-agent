@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="startButton" type="id" />
+    <item name="textureView" type="id" />
+    <item name="timerTextView" type="id" />
+    <item name="captureButton" type="id" />
+    <item name="resultTitle" type="id" />
+    <item name="resultTextView" type="id" />
+    <item name="backButton" type="id" />
+</resources>

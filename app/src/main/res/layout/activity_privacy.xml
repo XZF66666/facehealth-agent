@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_home_gradient" android:clipToPadding="false" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="20dp" android:paddingTop="24dp" android:paddingEnd="20dp" android:paddingBottom="28dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+            <Button android:id="@+id/pageBackButton" style="@style/BackAction" android:layout_width="46dp" android:layout_height="42dp" android:text="‹" />
+            <TextView style="@style/PageTitle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_weight="1" android:text="隐私与数据" />
+        </LinearLayout>
+        <TextView style="@style/PageSubtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="你的面部视频只用于本机信号分析" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:background="@drawable/bg_glass_panel" android:orientation="vertical" android:padding="18dp">
+            <TextView style="@style/SectionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我们如何保护数据" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:lineSpacingExtra="7dp" android:text="01  人脸视频仅在本地用于生理信号分析，不上传原始视频与图像。\n\n02  云端模型只接收脱敏后的健康指标和你主动填写的文字。\n\n03  本地历史数据可随时清除，系统不会将结果作为医学诊断依据。" android:textColor="@color/ink" android:textSize="15sp" />
+        </LinearLayout>
+
+        <CheckBox android:id="@+id/privacyCheck" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:buttonTint="@color/primary" android:padding="8dp" android:text="我已阅读并同意隐私说明" android:textColor="@color/ink" android:textSize="15sp" />
+        <Button android:id="@+id/agreeButton" style="@style/PrimaryAction" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="同意并继续" />
+        <Button android:id="@+id/deleteButton" style="@style/SecondaryAction" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="10dp" android:background="@drawable/bg_danger_soft" android:text="删除本地历史数据" android:textColor="@color/rose" />
+    </LinearLayout>
+</ScrollView>
